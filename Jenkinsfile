@@ -17,6 +17,7 @@ pipeline {
     stage('Maven Build') {
      steps { 
           sh "mvn clean package && cp target/*.jar . "
+          //we are coping .jar file from target dir to currect. we can use that file to copy that file to dockerfile and use in CMD.
      }
     }
      
